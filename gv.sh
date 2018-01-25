@@ -1,8 +1,5 @@
 #!/bin/bash
-########## Setting ##########
-threads=16 # 根据自身情况调整，若不会调整则按默认值即可
-########## Code ##########
-clear
+threads=16
 echo "$keyerrorlogo";
 echo "请确保填写的信息准确，填错了脚本不会有任何提示。";
 echo "按Enter继续";
@@ -24,10 +21,10 @@ read
 
 
 
-for((i=0;i<$threads;++i));
+for((i=0;i<$threads;++i))
     do
 	a=`bash gv.txt`;
-        b='[[null,null,"Something went wrong"]]';
+        b='[[null,null,"There was an error with your request. Please try again."]]';
 	if [[ "$a" != "$b" ]];
         then
         echo "执行失败/申请成功";
