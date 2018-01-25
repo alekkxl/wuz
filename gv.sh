@@ -1,12 +1,9 @@
 #!/bin/bash
 keyerrorlogo='
-==================================================================
-
-           --------- Google Voice申请脚本 ----------
-		   		   
-                            部分拼凑于 -----  jialezi 
-==================================================================';
-
+自用';
+########## Setting ##########
+threads=16 # 根据自身情况调整，若不会调整则按默认值即可
+########## Code ##########
 clear
 echo "$keyerrorlogo";
 echo "请确保填写的信息准确，填错了脚本不会有任何提示。";
@@ -28,24 +25,18 @@ echo "按Enter开始刷号";
 read
 
 
-for (( i=1; i>0; i++ ))
+
+for((i=0;i<$threads;++i));
     do
 	a=`bash gv.txt`;
-        b='[[null,null,"There was an error with your request. Please try again."]]';
-
-contains() {
-    string="$a"
-    substring="$b"
-    if test "${string#*$substring}" != "$string"
-    then
-        return 0    # $substring is in $string
-    else
-        return 1    # $substring is not in $string
-    fi
-}
-
-while true; do
-    result=$(...)
-    contains "$result" "error" || exit 0
-    sleep 0.5s;
+        b='[[null,null,"Something went wrong"]]';
+	if [[ "$a" != "$b" ]];
+        then
+        echo "执行失败/申请成功";
+        echo "共执行 $i 次";
+        exit 0;
+        else
+        echo "第 $i 次尝试 "`date`;
+	fi
+    sleep 0.3s;
 done
