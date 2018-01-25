@@ -8,7 +8,6 @@ keyerrorlogo='
 ==================================================================';
 
 clear
-threads=16
 echo "$keyerrorlogo";
 echo "请确保填写的信息准确，填错了脚本不会有任何提示。";
 echo "按Enter继续";
@@ -28,7 +27,7 @@ sed -i 's/true%5D/%22%2B1'$gv'%22%2Ctrue%2C%22%22%5D/' gv.txt
 echo "按Enter开始刷号";
 read
 
-
+threads=16
 
 for((i=0;i<$threads;++i))
     do
