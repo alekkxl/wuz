@@ -41,5 +41,5 @@ for((i=0;i<$threads;++i))
         else
         echo "第 $i 次尝试 "`date`;
 	fi
-    sleep 0.5s;
+    sleep 0.3s;
 done
