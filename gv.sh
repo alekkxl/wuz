@@ -29,7 +29,7 @@ read
 
 threads=16
 
-for((i=0;i<$threads;++i))
+for (( i=1; i>0; i++ ))
     do
 	a=`bash gv.txt`;
         b='[[null,null,"There was an error with your request. Please try again."]]';
