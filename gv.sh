@@ -1,9 +1,4 @@
 #!/bin/bash
-keyerrorlogo='
-自用';
-
-clear
-echo "$keyerrorlogo";
 echo "请确保填写的信息准确，填错了脚本不会有任何提示。";
 echo "按Enter继续";
 read
