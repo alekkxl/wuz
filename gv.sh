@@ -1,11 +1,6 @@
 #!/bin/bash
 keyerrorlogo='
-==================================================================
-
-           --------- Google Voice申请脚本 ----------
-		   		   
-                                                 -----  jialezi 
-==================================================================';
+自用';
 
 clear
 echo "$keyerrorlogo";
@@ -29,7 +24,7 @@ read
 
 threads=16
 
-for (( i=1; i>0; i++ ))
+for (( i=1; i<$threads; i>0; i++ ))
     do
 	a=`bash gv.txt`;
         b='[[null,null,"There was an error with your request. Please try again."]]';
