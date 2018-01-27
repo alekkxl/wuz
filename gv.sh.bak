@@ -13,9 +13,6 @@ sed -i 's/true%5D/%22%2B1'$gv'%22%2Ctrue%2C%22%22%5D/' gv.txt
 echo "按Enter开始刷号";
 read
 threads=15
-for ((i=0;i<$thread;i++)); do
-	echo
-	done
 contains () {
 string="$1"
 substring="$2"
