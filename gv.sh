@@ -12,7 +12,7 @@ sed -i 's/mid=2/mid=6/' gv.txt
 sed -i 's/true%5D/%22%2B1'$gv'%22%2Ctrue%2C%22%22%5D/' gv.txt
 echo "按Enter开始刷号";
 read
-threads=15
+threads=6
 contains () {
 string="$1"
 substring="$2"
@@ -27,5 +27,5 @@ while true;
 do
 result=`bash gv.txt`;
 contains "$result" "error" || exit 0
-sleep 1
+sleep 0.4s
 done
