@@ -27,5 +27,5 @@ while true;
 do
 result=`bash gv.txt`;
 contains "$result" "error" || exit 0
-sleep 0.4
+sleep 0.4s
 done
